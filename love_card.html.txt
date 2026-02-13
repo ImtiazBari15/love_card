@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Jaan ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    overflow: hidden;
+    color: white;
+}
+
+/* Background Slideshow */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 24s infinite;
+}
+
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 6s; }
+.slideshow img:nth-child(3) { animation-delay: 12s; }
+.slideshow img:nth-child(4) { animation-delay: 18s; }
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Center Content */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Premium Glow Text */
+h1 {
+    font-size: 60px;
+    background: linear-gradient(45deg, #ff4e50, #ff9a9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4e50; }
+    to { text-shadow: 0 0 30px #ff9a9e; }
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    color: #ff4e50;
+    font-size: 20px;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+    <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<!-- BACKGROUND SLIDESHOW -->
+<div class="slideshow">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+</div>
+
+<div class="overlay"></div>
+
+<!-- TEXT CONTENT -->
+<div class="content">
+    <h1>I love you my jaan ❤️</h1>
+</div>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left:10%; animation-duration:7s;">❤️</div>
+<div class="heart" style="left:30%; animation-duration:6s;">❤️</div>
+<div class="heart" style="left:50%; animation-duration:8s;">❤️</div>
+<div class="heart" style="left:70%; animation-duration:5s;">❤️</div>
+<div class="heart" style="left:90%; animation-duration:9s;">❤️</div>
+
+</body>
+</html>
